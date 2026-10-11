@@ -1,0 +1,6 @@
+﻿models/
+memory/
+klis_backup.py
+__pycache__/
+*.pyc
+.env
