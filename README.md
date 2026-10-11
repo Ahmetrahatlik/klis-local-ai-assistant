@@ -1,37 +1,35 @@
-# Klis – Local AI Assistant
+# Klis - Local AI Assistant
 
-Klis, Python ve LM Studio kullanılarak geliştirilen yerel bir yapay zeka asistanıdır.
+Klis is a privacy-first local AI assistant built with Python and a local LLM served through an OpenAI-compatible API.
 
-Klis; yerel LLM entegrasyonu, kalıcı hafıza, SQLite tabanlı konuşma geçmişi ve modüler araç yapısını bir araya getiren kişisel bir AI assistant projesidir.
+The project focuses on persistent memory, contextual conversations, modular architecture, and local tool execution without relying on cloud-based AI services for its core functionality.
 
 ## Features
 
-- Local LLM integration
-- OpenAI-compatible API
-- Persistent memory
-- SQLite conversation history
-- SQLite FTS5 full-text search
-- Context-aware conversations
-- Manual and automatic memory management
-- Modular tool architecture
-- Configurable model and application settings
-- Local-first architecture
+* Persistent conversation memory
+* SQLite FTS5 full-text search
+* Context-aware conversations
+* Local LLM integration
+* OpenAI-compatible API support
+* Modular tool-calling architecture
+* Python script generation and execution
+* Automatic and manual memory management
+* Configurable application and model settings
+* Local-first architecture
 
 ## Tech Stack
 
-- Python
-- LM Studio
-- OpenAI-compatible API
-- SQLite
-- SQLite FTS5
-- JSON
-- Git / GitHub
+* Python
+* LM Studio
+* OpenAI-compatible API
+* SQLite
+* SQLite FTS5
+* JSON
+* Git / GitHub
 
 ## Architecture
 
-Klis, internet tabanlı bir yapay zeka servisine bağlı kalmadan yerel bir LLM ile çalışacak şekilde tasarlanmıştır.
-
-Proje, farklı sorumlulukları ayrı modüllere ayıran modüler bir mimari kullanır:
+Klis uses a modular architecture where different responsibilities are separated into dedicated components.
 
 ```text
 Klis/
@@ -41,7 +39,47 @@ Klis/
 ├── prompts.py
 ├── memory_manager.py
 ├── tools.py
-├── requirements.txt
-├── README.md
 ├── memory/
-└── models/
+├── models/
+├── requirements.txt
+└── README.md
+```
+
+### Core Components
+
+* `main.py` - Application entry point
+* `klis.py` - Core assistant logic
+* `memory_manager.py` - Persistent memory and conversation retrieval
+* `tools.py` - Local tool execution and tool-calling functionality
+* `prompts.py` - System and assistant prompts
+* `config.py` - Application and model configuration
+
+## Memory System
+
+Klis uses SQLite to store conversation history and persistent memory.
+
+SQLite FTS5 is used for full-text search, allowing relevant previous conversations and stored information to be retrieved when needed.
+
+The memory system supports both automatic and manual memory management.
+
+## Tool Calling
+
+Klis uses a modular tool architecture that allows the local LLM to interact with local functionality.
+
+One of the available capabilities is generating and executing Python scripts inside an isolated virtual environment.
+
+## Local-First Design
+
+Klis is designed to run primarily on the user's local machine.
+
+The LLM is served locally through an OpenAI-compatible API, keeping the core conversation and memory workflow independent from cloud-based AI services.
+
+## Project Status
+
+Klis is an actively developed personal AI assistant project focused on local LLM integration, persistent memory, modular architecture, and practical automation.
+
+## Author
+
+Ahmet Zülkarneyn Rahatlık
+
+GitHub: https://github.com/Ahmetrahatlik
