@@ -1,88 +1,47 @@
-@"
-
-\# Klis – Local AI Assistant
-
-
+# Klis – Local AI Assistant
 
 Klis, Python ve LM Studio kullanılarak geliştirilen yerel bir yapay zeka asistanıdır.
 
+Klis; yerel LLM entegrasyonu, kalıcı hafıza, SQLite tabanlı konuşma geçmişi ve modüler araç yapısını bir araya getiren kişisel bir AI assistant projesidir.
 
+## Features
 
-\## Features
+- Local LLM integration
+- OpenAI-compatible API
+- Persistent memory
+- SQLite conversation history
+- SQLite FTS5 full-text search
+- Context-aware conversations
+- Manual and automatic memory management
+- Modular tool architecture
+- Configurable model and application settings
+- Local-first architecture
 
+## Tech Stack
 
+- Python
+- LM Studio
+- OpenAI-compatible API
+- SQLite
+- SQLite FTS5
+- JSON
+- Git / GitHub
 
-\- Local LLM integration
-
-\- OpenAI-compatible API
-
-\- Persistent memory
-
-\- SQLite conversation history
-
-\- SQLite FTS5 full-text search
-
-\- Context-aware conversations
-
-\- Manual memory management
-
-\- Local-first architecture
-
-
-
-\## Tech Stack
-
-
-
-\- Python
-
-\- LM Studio
-
-\- OpenAI-compatible API
-
-\- SQLite
-
-\- SQLite FTS5
-
-\- JSON
-
-
-
-\## Architecture
-
-
+## Architecture
 
 Klis, internet tabanlı bir yapay zeka servisine bağlı kalmadan yerel bir LLM ile çalışacak şekilde tasarlanmıştır.
 
+Proje, farklı sorumlulukları ayrı modüllere ayıran modüler bir mimari kullanır:
 
-
-Conversation history SQLite üzerinde tutulur ve FTS5 kullanılarak geçmiş konuşmalar içerisinde arama yapılabilir.
-
-
-
-\## Requirements
-
-
-
-\- Python 3.10+
-
-\- LM Studio
-
-\- Compatible local LLM
-
-\- OpenAI Python package
-
-
-
-\## Setup
-
-
-
-1\. Install the required Python package:
-
-
-
-&#x20;  ``````text
-
-&#x20;  pip install -r requirements.txt
-
+```text
+Klis/
+├── main.py
+├── klis.py
+├── config.py
+├── prompts.py
+├── memory_manager.py
+├── tools.py
+├── requirements.txt
+├── README.md
+├── memory/
+└── models/
